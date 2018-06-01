@@ -1,10 +1,11 @@
 import * as React from "react";
+import { connect } from "react-redux";
 
-export interface IProps {
+interface IProps {
     name: string;
 };
 
-export const TodoApp = ({ name }: IProps): JSX.Element => {
+const TodoApp = ({ name }: IProps): JSX.Element => {
     return (
         <div>
             <h1>{name}</h1>
@@ -13,3 +14,9 @@ export const TodoApp = ({ name }: IProps): JSX.Element => {
         </div>
     );
 };
+
+const mapStateToProps = (state: any) => ({
+    items: state.items
+});
+
+export default connect(mapStateToProps)(TodoApp);
