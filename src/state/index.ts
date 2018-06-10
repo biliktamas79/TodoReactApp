@@ -37,6 +37,7 @@ export const mainReducer = (state: State | undefined, action: any) => {
             }
 
             return state;
+
         default:
             return state;
     }
