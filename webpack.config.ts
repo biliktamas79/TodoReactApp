@@ -2,6 +2,10 @@
 import * as webpack from "webpack";
 
 const configuration: webpack.Configuration = {
+  entry: "./src/index.tsx",
+  output: {
+    filename: "bundle.js",
+  },
   resolve: {
     extensions: [ ".js", ".jsx", ".ts", ".tsx" ],
   },
