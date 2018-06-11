@@ -1,15 +1,16 @@
 export class TodoItem {
-    constructor(public name: string, public description?: string) {
+    public constructor(public name: string, public description?: string) {
         // super();
     }
 }
 
+// tslint:disable-next-line:max-classes-per-file
 class State {
-    public items: Array<TodoItem>;
+    public items: TodoItem[];
 
-    constructor() {
+    public constructor() {
         // super();
-        this.items = []
+        this.items = [];
     }
 }
 
