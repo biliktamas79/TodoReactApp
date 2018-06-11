@@ -4,7 +4,8 @@
   "description": "",
   "main": "dist/bundle.js",
   "scripts": {
-    "build-dist": "./node_modules/.bin/webpack-cli  --progress",
+    "build-dist": "./node_modules/.bin/webpack-cli --progress",
+    "build-dev": "./node_modules/.bin/webpack-cli --progress --mode development",
     "start": "./node_modules/.bin/webpack-dev-server --mode development --watch-poll"
   },
   "repository": {

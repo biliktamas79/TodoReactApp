@@ -4,7 +4,12 @@ import * as webpack from "webpack";
 const configuration: webpack.Configuration = {
   resolve: {
     extensions: [ ".js", ".jsx", ".ts", ".tsx" ],
-
+  },
+  module: {
+    rules: [
+      // all files with a `.ts` or `.tsx` extension will be handled by `ts-loader`
+      { test: /\.tsx?$/, loader: "ts-loader" }
+    ],
   },
 };
 
