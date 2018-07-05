@@ -1,5 +1,6 @@
 import * as React from "react";
 import { connect } from "react-redux";
+import Login from "../Login";
 
 interface IProps {
     name: string;
@@ -7,9 +8,8 @@ interface IProps {
 
 const todoApp = ({ name }: IProps): JSX.Element => (
     <div>
-        <h1>{name}</h1>
-        <button className="button is-success">Button is-loading</button>
-        <input className="input is-success" type="text" placeholder="Success input" />
+        <Login />
+        { name }
     </div>
 );
 
